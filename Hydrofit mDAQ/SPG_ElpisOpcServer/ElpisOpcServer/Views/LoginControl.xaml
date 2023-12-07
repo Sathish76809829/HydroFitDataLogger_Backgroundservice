@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ElpisOpcServer.Views.LoginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ElpisOpcServer.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+   
+    <Grid  Background="#FFF0E6DC">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+        <Image  Grid.Column="1" Width="150" Height="200" VerticalAlignment="Bottom">
+            
+            <Image.Source>
+                <BitmapImage UriSource="/Images/profile_icn.png"></BitmapImage>
+            </Image.Source>
+        </Image>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <TextBlock  Grid.Column="0" Grid.Row="0" FontSize="30" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top">UserName :</TextBlock>
+            <TextBox x:Name="txtUserName" Grid.Row="0" Grid.Column="1" Height="30" Width="200" BorderBrush="Black" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" ></TextBox>
+
+            <TextBlock  Grid.Column="0" Grid.Row="1" FontSize="30" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top">Password :</TextBlock>
+            <!--<TextBox x:Name="txtPasswword" Grid.Row="1" Grid.Column="1" Height="30" Width="200" BorderBrush="Black" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" ></TextBox>-->
+            <PasswordBox x:Name="txtPasswword" Grid.Row="1" Grid.Column="1" Height="30" Width="200" BorderBrush="Black" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" ></PasswordBox>
+            <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" MinWidth="160" MinHeight="35" FontWeight="ExtraBold" Click="btnLogin_Click" Margin="208,55,204,10" >
+               
+            </Button>
+
+            
+
+        </Grid>
+    </Grid>
+</UserControl>
